@@ -1,3 +1,12 @@
 *
 
+# Github
 !.gitignore
+!README.md
+
+# bash_prompt
+!.bash_prompt
+!.bash_aliases
+
+# tmux
+!.tmux.conf

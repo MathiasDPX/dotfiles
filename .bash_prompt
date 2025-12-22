@@ -1,0 +1,29 @@
+#!/bin/bash
+
+update_ps1() {
+    if sudo -n true 2>/dev/null; then
+        USER_HOST='\[\033[01;31m\]\u@\h'  # Red for root
+    else
+        USER_HOST='\[\033[01;32m\]\u@\h'  # Green for normal user
+    fi
+
+    CURRENT_DIR='\[\033[01;34m\] \w'
+    RESET_COLOR='\[\033[00m\]'
+
+    if [[ $EUID -eq 0 ]]; then 
+	PROMPT_CHAR='\[\033[33m\]#\[\033[00m\]> '
+    else
+	PROMPT_CHAR='\[\033[33m\]\$\[\033[00m\]> '
+    fi
+
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+	venv_name=$(basename "$VIRTUAL_ENV")
+	VENV='($venv_name) '
+    else
+	VENV=''
+    fi
+
+    PS1="${USER_HOST}${CURRENT_DIR}${RESET_COLOR}\n${VENV}${PROMPT_CHAR}"
+}
+
+PROMPT_COMMAND=update_ps1
