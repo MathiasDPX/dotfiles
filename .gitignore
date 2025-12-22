@@ -10,3 +10,6 @@
 
 # tmux
 !.tmux.conf
+
+# nvim
+!.config/nvim

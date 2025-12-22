@@ -1,0 +1,3 @@
+use :q! to save and quit
+♫ Feel like a brand new person ♫
+Noot-noot 🎺
