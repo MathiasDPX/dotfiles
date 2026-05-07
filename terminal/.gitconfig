@@ -1,0 +1,20 @@
+[user]
+        email = mathias@dupeux.net
+        name = MathiasDPX
+        signingkey = 89E4EEB99C9AD348
+
+[init]
+        defaultBranch = main
+
+[push]
+        autoSetupRemote = true
+
+[pull]
+        rebase = true
+
+[gpg]
+        format = openpgp
+        program = /usr/bin/gpg
+
+[commit]
+        gpgsign = true

@@ -22,10 +22,6 @@ alias l='ls -CF'
 alias vi='nvim'
 alias vim='nvim'
 
-# weird aliases
-alias ":q!"=exit
-alias "~"="cd ~"
-
 # easier parent cd
 alias '..'='cd ..'
 alias '...'='cd ../..'
@@ -46,7 +42,7 @@ j() {
         documents) cd ~/Documents ;;
 	music) cd ~/Music ;;
 	desktop) cd ~/Desktop ;;
-	docs) cd ~/Documents ;;
+	docs) cd ~/Documents ;;
 	doc) cd ~/Documents ;;
 
     downloads) cd ~/Downloads ;;

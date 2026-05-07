@@ -1,7 +1,9 @@
 # dotenv
 
-## Installation
+# Git with Yubikey
 
-1. Backup your current config
-2. Clone this repo
-3. Create a file named `.bash_env` with all your PATH
+If your SSH key is added through `ssh-add -K`, on Windows, you need to tell Git to use OpenSSH instead of its own ssh
+
+```sh
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
