@@ -10,6 +10,8 @@ GPG_BIN=$(which gpg)
 echo "> Import public key"
 gpg --keyserver keys.openpgp.org --recv-keys "$FINGERPRINT"
 
+# You can also import it from GitHub (less secure)
+# curl -fsSL https://github.com/MathiasDPX.gpg | gpg --import
 
 echo "> Trust public key"
 echo -e "5\ny\n" | gpg --command-fd 0 --edit-key "$KEY_ID" trust quit
